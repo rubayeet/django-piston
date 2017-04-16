@@ -100,9 +100,7 @@ class Resource(object):
 
         for authenticator in self.authentication:
             if not authenticator.is_authenticated(request):
-                if self.anonymous and \
-                    rm in self.anonymous.allowed_methods:
-
+                if self.anonymous and rm in self.anonymous.allowed_methods:
                     actor, anonymous = self.anonymous(), True
                 else:
                     actor, anonymous = authenticator.challenge, CHALLENGE
@@ -201,7 +199,7 @@ class Resource(object):
             else: stream = srl.render(request)
 
             if not isinstance(stream, HttpResponse):
-                resp = HttpResponse(stream, mimetype=ct, status=status_code)
+                resp = HttpResponse(stream, content_type=ct, status=status_code)
             else:
                 resp = stream
 

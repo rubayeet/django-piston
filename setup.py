@@ -11,16 +11,14 @@ except ImportError:
 import os
 
 setup(
-    name = "marcio0-django-piston",
-    version = "0.2.5.1",
-    url = 'http://github.com/marcio0/django-piston',
-	# download_url = 'https://github.com/marcio0/django-piston/archive/0.2.5rc.tar.gz',
+    name = "django-piston",
+    version = "0.2.5.2",
+    url = 'https://github.com/rubayeet/django-piston',
     license = 'BSD',
     description = "Piston is a Django mini-framework creating APIs.",
     author = 'Jesper Noehr',
     author_email = 'jesper@noehr.org',
     packages = find_packages(),
-    # namespace_packages = ['piston'],
     include_package_data = True,
     zip_safe = False,
     classifiers = [
